@@ -56,6 +56,14 @@ ADLS Gen2
 ```
 
 ---
+## Pipeline Overview
+
+The following diagram shows the end-to-end Databricks pipeline and task dependencies across the Bronze, Silver and Gold layers.
+
+![Databricks End-to-End Pipeline](images/pipeline.png)
+
+
+---
 
 # Azure Infrastructure
 
@@ -273,6 +281,15 @@ fact_sales
 Dates are connected to the Calendar dimension through surrogate keys, while customer, product, and territory relationships are established through their respective dimension keys.
 
 This creates a clean analytical model suitable for reporting and BI workloads.
+
+---
+
+## Gold Layer Data Model
+
+The Gold layer follows a dimensional modeling approach using a Star Schema. 
+Dimension tables are connected to the central Sales Fact table through surrogate keys.
+
+![Gold Layer Star Schema](images/data-model.png)
 
 ---
 
